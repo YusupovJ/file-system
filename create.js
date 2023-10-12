@@ -10,8 +10,11 @@ const createFile = () => {
 	};
 
 	fs.writeFile(url, data, options, (error) => {
-		if (error) console.log(error.message);
-		console.log("File succecfully created");
+		if (error) {
+			console.log(error.message);
+		} else {
+			console.log("File succecfully created!");
+		}
 	});
 };
 
